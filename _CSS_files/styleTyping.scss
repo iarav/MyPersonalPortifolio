@@ -1,0 +1,61 @@
+
+//Completely customizable
+//--
+$letter-spacing: 0.0625em; //This counts for 1px on 16px font;
+$letter-count: 28; //Number of letters in text !important
+$transition-time: 4s; //Typing speed
+$mask-color: #ffffff; //Change it to see how this works :)
+$font-color: #000000;
+
+$letter-size: calc(1ch + #{$letter-spacing});
+$cursor-width: 1px; //Change this to $letter-size if you want Insert:active effect
+//--
+$cursor-blink-duration: $letter-count;
+$font-width: calc(#{$letter-count}ch + #{$letter-count}*#{$letter-spacing});
+
+#intro-page {
+
+	h1,h2 {
+        width: $font-width;
+
+	    &:after {
+			display: block;
+			position: absolute;
+			content: '';
+			width: $font-width;
+			height: 2ex;
+			left: 0;
+			top: 0;
+			background: $mask-color;
+			animation: .10s blink $cursor-blink-duration, move $transition-time 1.5s forwards steps(1);
+			border-left: $cursor-width solid $font-color;
+			box-shadow: 0px 1ex 0px 0px $mask-color;
+
+			@keyframes move {
+				@for $i from 1 through $letter-count {
+					$temp: 100/$letter-count;
+					$percent: $i*$temp * 1%;
+					#{$percent} {
+						width: calc(#{$font-width} - (#{$i}ch + #{$i}*#{$letter-spacing}));
+						left: calc(#{$i}ch + #{$i}*#{$letter-spacing});
+					}
+				}
+			}
+
+			@keyframes blink {
+				0% {
+			  		border-left-color: $font-color;
+				}
+				50% {
+			  		border-left-color: $font-color;
+				}
+				51% {
+			  		border-left-color: $mask-color;
+				}
+				100% {
+			  		border-left-color: $mask-color;
+				}
+			}
+	  	}
+	}
+}
