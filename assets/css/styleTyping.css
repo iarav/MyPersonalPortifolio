@@ -1,3 +1,5 @@
+/* --------------------------  TYPING EFFECT - h1, h2 - STYLE  --------------------------*/
+
 #intro-page h1, #intro-page h2 {
     width: calc(28ch + 28*0.0625em);
 }

@@ -1,6 +1,7 @@
 
 var h = window.innerHeight/2 - window.innerHeight/8;
 var professionH = window.innerHeight/8;
+var aboutH = window.innerHeight/2 - 50;
 var menuAberto = false;
 
 window.onscroll = function() {scrollFunction()};
@@ -33,19 +34,29 @@ function scrollFunction() {
     document.getElementById("cover-profession").style.animation = "enterFromTop 3s linear";
     document.getElementById("cover-profession").style.height = "0vh";
   } else{
-    document.getElementById("cover-profession").style.animation = "none";
     document.getElementById("cover-profession").style.height = "30vh";
+  }
+
+  if (document.body.scrollTop >= aboutH || document.documentElement.scrollTop >= aboutH) {
+    document.getElementById("cover-aboutme").style.animation = "enterFromLeft 7s linear";
+    document.getElementById("cover-aboutme").style.width = "0%";
+    document.getElementById("cover-pc").style.animation = "enterFromLeft 7s linear";
+    document.getElementById("cover-pc").style.width = "0%";
+    setTimeout(() => { document.getElementById("btn-download").style.visibility = "visible"; }, 7200);
+  } else{
+    document.getElementById("cover-aboutme").style.width = "51%";
+    document.getElementById("cover-pc").style.width = "51%";
   }
 
 }
 
-function abrirMenu(){
+function openMenu(){
   var navbox = document.getElementById("nav-box-hor").style;
   navbox.visibility = "visible";
   menuAberto=true;
 }
 
-function fecharMenu(){
+function closeMenu(){
   var navbox = document.getElementById("nav-box-hor").style;
   navbox.visibility = "hidden";
   menuAberto=false;

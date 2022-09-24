@@ -8,40 +8,26 @@
     <title>Personal Portfolio - Iara Vaneti</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/styleTyping.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
     <script src="./assets/js/mainscript.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./assets/js/smoothScript.js"></script>
 </head>
-
 <body>
     <div id="nav">
-        <div onclick="abrirMenu()" id="menu-img">
+        <div onclick="openMenu()" id="menu-img">
             <div id="circle"></div>
-            <img id="img-menu" src="./imgs/menu.svg" alt="Menu">
+            <img id="img-menu" src="./assets/icons/menu.svg" alt="Menu">
         </div>
-        <!-- <div id="nav-box">
-            <div id="inner-box">
-                <nav id="nav-inner-box">
-                    <a href="#" class="nav-item">
-                        <p class="nav-text">Infos</p>
-                        <div class="nav_line"></div>
-                    </a>
-                    <a href="#" class="nav-item">
-                        <p class="nav-text">Education</p>
-                        <div class="nav_line"></div>
-                    </a>
-                </nav>
-            </div>
-        </div> -->
         <div id="nav-box-hor">
             <div id="close">
                 <h2>IARA VANETI</h2>
-                <img onclick="fecharMenu()" src="./imgs/close.png" alt="Fechar">
+                <img onclick="closeMenu()" src="./assets/icons/close.png" alt="Fechar">
             </div>
             <div id="inner-box-hor">
                 <nav id="nav-inner-box-hor">
                     <div class="links">
-                        <a href="#main" class="nav-item">
+                        <a href="#page1" class="nav-item">
                             <p class="nav-text">Intro</p>
                             <div class="nav_line"></div>
                         </a>
@@ -56,7 +42,7 @@
             </div>
         </div>
     </div>
-    <div id="main">
+    <div id="page1">
         <div id="intro-page">
             <div class="intro-texts">
                 <h1>Olá, meu nome é Iara Vaneti.</h1>
@@ -65,8 +51,8 @@
         </div>
     </div>
     <div id="oval">
-        <a id="link-seta" href="#page2">
-            <img id="seta" src="./imgs/right-arrow.png" alt="seta">
+        <a id="link-arrow" href="#page2">
+            <img id="arrow" src="./assets/icons/right-arrow.png" alt="arrow">
         </a>
     </div>
     <div id="page2">
@@ -86,19 +72,20 @@
             </div>
             <div id="computer">
                 <div id="cover-pc"></div>
-                <img src="./imgs/computador.png" alt="computador">
+                <img src="./assets/images/computador.png" alt="computador">
                 <h4>&ltIARA VANETI/&gt</h4>
             </div>
         </div>
+        <a href="./download/Currículo_IaraVaneti.pdf" download="Currículo Iara Vaneti.pdf" class="btn down" id="btn-download" title="Baixar Curriculo">Baixar Currículo</a>
     </div>
     <!-- <div id="education">
         <h3>HISTÓRICO ESCOLAR:</h3>
         <div id="etec">
-            <img src="./imgs/polivalente-logo.png" alt="Etec">
+            <img src="./assets/images/polivalente-logo.png" alt="Etec">
             <h4>ETEC Polivalente de Americana</h4>
         </div>
         <div id="unicamp">
-            <img src="./imgs/unicamp-logo-branco.png" alt="Unicamp">
+            <img src="./assets/images/unicamp-logo-branco.png" alt="Unicamp">
             <h4>UNICAMP - Universidade Estadual de Campinas</h4>
         </div>
     </div> -->
