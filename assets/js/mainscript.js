@@ -1,5 +1,6 @@
 
 var h = window.innerHeight/2 - window.innerHeight/8;
+var professionH = window.innerHeight/8;
 var menuAberto = false;
 
 window.onscroll = function() {scrollFunction()};
@@ -27,6 +28,15 @@ function scrollFunction() {
       document.getElementById("nav-box-hor").style.visibility = "visible";
     }
   }
+
+  if (document.body.scrollTop >= professionH || document.documentElement.scrollTop >= professionH) {
+    document.getElementById("cover-profession").style.animation = "enterFromTop 3s linear";
+    document.getElementById("cover-profession").style.height = "0vh";
+  } else{
+    document.getElementById("cover-profession").style.animation = "none";
+    document.getElementById("cover-profession").style.height = "30vh";
+  }
+
 }
 
 function abrirMenu(){

@@ -273,6 +273,14 @@ body {
   text-align: center;
 }
 
+#cover-profession{
+  position: absolute;
+  width: 100%;
+  height: 30vh;
+  background-color: #00031f;
+  z-index: 901;
+}
+
 #grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -283,14 +291,31 @@ body {
   grid-area: 'abme';
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   height: 70vh;
-  padding-top: 10vh;
+  padding-top: 15vh;
 }
 
 #aboutme h4{
+  font-size: 1.4em;
   text-align: left;
   font-weight: 100;
+}
+
+#cover-aboutme{
+  position: absolute;
+  width: 0%;
+  height: 50vh;
+  background-color: #00031f;
+  animation: enterFromLeft 7s linear;
+}
+
+#cover-pc{
+  position: absolute;
+  width: 0%;
+  height: 50vh;
+  background-color: #00031f;
+  animation: enterFromLeft 7s linear;
 }
 
 #computer{
@@ -357,5 +382,23 @@ body {
   }
   100% {
     bottom: 5px;
+  }
+}
+
+@keyframes enterFromLeft{
+  0%{
+    width: 51%;
+  }
+  100%{
+    width: 0%;
+  }
+}
+
+@keyframes enterFromTop{
+  0%{
+    height: 30vh;
+  }
+  100%{
+    height: 0vh;
   }
 }
